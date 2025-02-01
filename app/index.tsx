@@ -1,21 +1,48 @@
-import { Text, View, ImageBackground } from "react-native";
+import { Platform, StatusBar, Text, Image, View, StyleSheet, SafeAreaView, ScrollView } from "react-native";
 import Card from '@/components/card'
+import CardTitle from '@/components/CardTitle'
+import WelcomeBack from '@/components/WelcomeBack'
+import { Colors } from '@/constants/Colors'
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        width: "100%",
+        height: "100%",
+        justifyContent: "center",
+        alignItems: "center"
+    },
+    scrollView: {
+      width: "100%",
+      paddingTop: '75%',
+      paddingLeft: 15,
+      paddingRight: 15
+    }
+});
 
 export default function Index() {
+  
   return (
-    <ImageBackground style={{width: "100%", height: "100%", justifyContent: "center", alignItems: "center"}} source={require('@/assets/images/BradleyHall.jpg')}>
-      <View
-      style={{
-        flex: 1,
-        justifyContent: "center",
-        width: "95%"
-      }}
-    >
-      <Card title="Welcome"></Card>
-      <Card title="Up Next"></Card>
-      <Card title="Campus Map"></Card>
-    </View>
-    </ImageBackground>
-    
+    <SafeAreaView style={styles.container}>
+      <Image style={{position: 'absolute', width: '100%', height:'100%'}} source={require('@/assets/images/BHallTransparent.png')} />
+      <ScrollView style={styles.scrollView}>
+
+        {/* Welcome Card */}
+        <Card>
+          <WelcomeBack name="Zachary" />
+        </Card>
+
+        {/* Up Next Card */}
+        <Card>
+          <CardTitle icon="calendar.badge.clock" title="Up Next" button={true} />
+        </Card>
+
+        {/* Campus Map */}
+        <Card>
+          <CardTitle icon="map" title="Campus Map" button={true} />
+        </Card>
+
+      </ScrollView>
+    </SafeAreaView>
   );
 }

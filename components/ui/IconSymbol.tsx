@@ -16,6 +16,9 @@ const MAPPING = {
   'list.bullet': 'dashboard',
   'calendar': 'calendar-month',
   'person': 'person',
+  'calendar.badge.clock': 'calendar-month',
+  'map': 'map',
+  'arrow.right': 'arrow-forward'
 } as Partial<
   Record<
     import('expo-symbols').SymbolViewProps['name'],
