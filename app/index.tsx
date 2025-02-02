@@ -1,4 +1,4 @@
-import { Platform, StatusBar, Text, Image, View, StyleSheet, SafeAreaView, ScrollView } from "react-native";
+import { Platform, StatusBar, Text, ImageBackground, Image, View, StyleSheet, SafeAreaView, ScrollView } from "react-native";
 import Card from '@/components/card'
 import CardTitle from '@/components/CardTitle'
 import WelcomeBack from '@/components/WelcomeBack'
@@ -20,29 +20,32 @@ const styles = StyleSheet.create({
     }
 });
 
+
+
 export default function Index() {
   
   return (
-    <SafeAreaView style={styles.container}>
-      <Image style={{position: 'absolute', width: '100%', height:'100%'}} source={require('@/assets/images/BHallTransparent.png')} />
-      <ScrollView style={styles.scrollView}>
+    <ImageBackground style={{position: 'absolute', width: '100%', height:'100%'}} source={require('@/assets/images/BHallTransparent.png')}>
+      <SafeAreaView style={styles.container}>
+        <ScrollView style={styles.scrollView}>
 
-        {/* Welcome Card */}
-        <Card>
-          <WelcomeBack name="Zachary" />
-        </Card>
+          {/* Welcome Card */}
+          <Card>
+            <WelcomeBack />
+          </Card>
 
-        {/* Up Next Card */}
-        <Card>
-          <CardTitle icon="calendar.badge.clock" title="Up Next" button={true} />
-        </Card>
+          {/* Up Next Card */}
+          <Card>
+            <CardTitle icon="calendar.badge.clock" title="Up Next" button={true} />
+          </Card>
 
-        {/* Campus Map */}
-        <Card>
-          <CardTitle icon="map" title="Campus Map" button={true} />
-        </Card>
+          {/* Campus Map */}
+          <Card>
+            <CardTitle icon="map" title="Campus Map" button={true} />
+          </Card>
 
-      </ScrollView>
-    </SafeAreaView>
+        </ScrollView>
+      </SafeAreaView>
+    </ImageBackground>
   );
 }
