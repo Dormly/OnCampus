@@ -1,3 +1,14 @@
-# OnCampus
+# Dormly OnCampus
 
-OnCampus is a work-in-progress mobile app designed to make day-to-day tasks easier for college students on campus.
+OnCampus is Dormly's app designed for student use.
+Many features and functionalities are planned, such as:
+
+- Digital Student ID
+- Campus Map
+- Campus Events Calendar
+- Dining Hall information
+- Dorm Hall information & services
+- Maintenance request portal
+- On-Demand shuttle services
+- Push notifications for package deliveries
+- Push notifications for emergency announcements
