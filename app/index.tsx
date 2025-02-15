@@ -2,6 +2,7 @@ import { Platform, StatusBar, Text, ImageBackground, Image, View, StyleSheet, Sa
 import Card from '@/components/card'
 import CardTitle from '@/components/CardTitle'
 import MapCard from '@/components/mapCard'
+import TopBar from '@/components/topBar'
 import WelcomeBack from '@/components/WelcomeBack'
 import { Colors } from '@/constants/Colors'
 import React from 'react';
@@ -29,9 +30,10 @@ const styles = StyleSheet.create({
 });
 
 export default function Index() {
-  
+
   return (
     <ImageBackground style={{position: 'absolute', width: '100%', height:'100%'}} source={require('@/assets/images/BHallTransparent.png')}>
+      <TopBar/>
       <SafeAreaView style={styles.container}>
         <ScrollView style={styles.scrollView}>
           {/* Welcome Card */}
