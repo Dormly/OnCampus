@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
         fontSize: 32,
     },
     secondaryText: {
-        color: '#971e13',
+        color: '#8534ee',
         fontSize: 32,
         fontWeight: 'bold'
     }

@@ -26,7 +26,7 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between'
     },
     text: {
-        color: '#971e13',
+        color: '#8534ee',
         fontSize: 20,
         fontWeight: 'bold',
         paddingLeft: 5
@@ -37,7 +37,7 @@ const CardTitle = (props: CardTitleProps) => {
   return (
     <View style={styles.cardTitle}>
         <View style={{flexDirection: 'row', alignItems: 'center'}}>
-            <IconSymbol size={20} name={props.icon} color={Colors.light.tint} weight="bold" />
+            <IconSymbol size={20} name={props.icon} color={Colors.light.tint} weight="bold"/>
             <Text style={styles.text}>{props.title}</Text>
         </View>
         {props.button && <IconSymbol size={20} name="arrow.right" color={Colors.light.text} weight="bold"/>}
